@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>IP Address Location</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstarpcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvo0V6kkud61VMwGG1jNtaaVUiToUnysQ">
+    </script>
+</head>
+<script>
+    let map
+     function initMap(){
+        map = new google.maps.Map(document.getElementById('map'),{
+            zoom:4,
+            scrollwheel:true,
+            centre:{
+                lat: 28.6204, 
+                lng: 77.0928
+            }
+        })
+     }
+</script>
+<body onload="initMap()">
+    <div class="container">
+        <div class="form-group">
+            <input class="form-control" type="text" id="ipaddress" placeholder="Fuck off"> 
+        </div>
+        <div id="location-text"></div>
+        <div id="map" style="height:500px"></div>
+    </div>
+</body>
+</html>
